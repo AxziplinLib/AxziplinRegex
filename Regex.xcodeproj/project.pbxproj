@@ -30,6 +30,7 @@
 		DC6758491EBDD1CE00B1AFFC = {
 			isa = PBXGroup;
 			children = (
+				DC67585E1EBDD2F400B1AFFC /* Sources */,
 				DC6758551EBDD1CE00B1AFFC /* Regex */,
 				DC6758541EBDD1CE00B1AFFC /* Products */,
 			);
@@ -50,6 +51,13 @@
 				DC6758571EBDD1CE00B1AFFC /* Info.plist */,
 			);
 			path = Regex;
+			sourceTree = "<group>";
+		};
+		DC67585E1EBDD2F400B1AFFC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +305,7 @@
 				DC67585D1EBDD1CE00B1AFFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
