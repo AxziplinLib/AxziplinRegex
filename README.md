@@ -1,2 +1,3 @@
-# AxziplinRegex
-AxziplinRegex
+# Regex
+
+Regex module of AxziplinLib.
