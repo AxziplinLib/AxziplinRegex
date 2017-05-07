@@ -25,13 +25,13 @@
 
 import Foundation
 
-public protocol StatusReadable {
-    var status: Self { get }
+public protocol StateReadable {
+    var state: Self { get }
     
 }
 
 extension Regex {
-    public struct Status {
+    public struct State {
         
     }
 }

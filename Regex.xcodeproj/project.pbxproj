@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		DC6758581EBDD1CE00B1AFFC /* Regex.h in Headers */ = {isa = PBXBuildFile; fileRef = DC6758561EBDD1CE00B1AFFC /* Regex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC6758601EBDD30C00B1AFFC /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67585F1EBDD30C00B1AFFC /* Regex.swift */; };
-		DC6758621EBF0DA500B1AFFC /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6758611EBF0DA500B1AFFC /* Status.swift */; };
+		DC6758621EBF0DA500B1AFFC /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6758611EBF0DA500B1AFFC /* State.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,7 +17,7 @@
 		DC6758561EBDD1CE00B1AFFC /* Regex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Regex.h; sourceTree = "<group>"; };
 		DC6758571EBDD1CE00B1AFFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC67585F1EBDD30C00B1AFFC /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
-		DC6758611EBF0DA500B1AFFC /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		DC6758611EBF0DA500B1AFFC /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				DC67585F1EBDD30C00B1AFFC /* Regex.swift */,
-				DC6758611EBF0DA500B1AFFC /* Status.swift */,
+				DC6758611EBF0DA500B1AFFC /* State.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -148,7 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC6758601EBDD30C00B1AFFC /* Regex.swift in Sources */,
-				DC6758621EBF0DA500B1AFFC /* Status.swift in Sources */,
+				DC6758621EBF0DA500B1AFFC /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
