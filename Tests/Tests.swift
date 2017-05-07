@@ -3,7 +3,7 @@
 //  Tests
 //
 //  Created by devedbox on 2017/5/7.
-//  Copyright © 2017年 jiangyou. All rights reserved.
+//  Copyright © 2017年 AxziplinLib. All rights reserved.
 //
 
 import XCTest
