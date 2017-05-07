@@ -109,9 +109,17 @@
 			isa = PBXGroup;
 			children = (
 				DC6758701EBF230400B1AFFC /* Tests.swift */,
+				DC6758791EBF235000B1AFFC /* Core */,
 				DC6758721EBF230400B1AFFC /* Info.plist */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		DC6758791EBF235000B1AFFC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
