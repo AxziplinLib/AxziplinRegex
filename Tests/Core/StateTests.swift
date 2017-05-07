@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Regex
 
 class StateTests: XCTestCase {
 
@@ -19,17 +20,12 @@ class StateTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testStateResult() {
+        let character: Character = "c"
+        let state = State(character)
+        let result = try? state.result(of: character)
+        
+        XCTAssert(result == .matched, "Result of State failed.")
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
