@@ -24,3 +24,7 @@
 //  SOFTWARE.
 
 import Foundation
+
+public struct Regex {
+    
+}
