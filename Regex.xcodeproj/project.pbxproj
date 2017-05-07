@@ -10,6 +10,7 @@
 		DC6758581EBDD1CE00B1AFFC /* Regex.h in Headers */ = {isa = PBXBuildFile; fileRef = DC6758561EBDD1CE00B1AFFC /* Regex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC6758601EBDD30C00B1AFFC /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67585F1EBDD30C00B1AFFC /* Regex.swift */; };
 		DC6758651EBF148200B1AFFC /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6758641EBF148200B1AFFC /* State.swift */; };
+		DC6758671EBF1A1500B1AFFC /* RegexError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6758661EBF1A1500B1AFFC /* RegexError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		DC6758571EBDD1CE00B1AFFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC67585F1EBDD30C00B1AFFC /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		DC6758641EBF148200B1AFFC /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		DC6758661EBF1A1500B1AFFC /* RegexError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		DC6758631EBF148200B1AFFC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				DC6758661EBF1A1500B1AFFC /* RegexError.swift */,
 				DC6758641EBF148200B1AFFC /* State.swift */,
 			);
 			path = Core;
@@ -157,6 +160,7 @@
 			files = (
 				DC6758601EBDD30C00B1AFFC /* Regex.swift in Sources */,
 				DC6758651EBF148200B1AFFC /* State.swift in Sources */,
+				DC6758671EBF1A1500B1AFFC /* RegexError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
