@@ -28,4 +28,23 @@ class StateTests: XCTestCase {
         
         XCTAssert(result == .matched, "Result of State failed.")
     }
+    
+    func testStateChain() {
+        var initial = State.initial
+        var state0 = initial.link(to: "a")
+        var state1 = state0.link(to: "b")
+        var state2 = state1.link(to: "c")
+        let final = state2.link()
+    }
+    
+    func testStringConformCharacterConvertible() {
+        let string = ""
+        do {
+            let _ = try string.asCharacter()
+        } catch RegexError.convertFailed(let reason) {
+            XCTAssert(reason == .outOfBounds, "Empty convert to one character failed.")
+        } catch {
+            XCTFail("Failed with error: \(error)")
+        }
+    }
 }
