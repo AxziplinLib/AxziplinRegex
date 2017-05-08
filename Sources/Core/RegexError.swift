@@ -23,4 +23,10 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import Foundation
+public enum RegexError: Error {
+    public enum ConvertibleReason {
+        // Like: try to convert "" to an character.
+        case outOfBounds
+    }
+    case convertFailed(ConvertibleReason)
+}

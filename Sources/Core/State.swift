@@ -25,13 +25,91 @@
 
 import Foundation
 
-public protocol StateReadable {
-    var state: Self { get }
-    
+// MARK: CharacterConvertible.
+
+/// Types conform to this protocol can generate a instance of `Character`, or throws an error of `RegexError` if cannot.
+public protocol CharacterConvertible {
+    /// Creates or transition to a instance of `Character`.
+    ///
+    /// - Throws: An error of `RegexError` if failed.
+    /// - Returns: An instance of `Character`.
+    func asCharacter() throws -> Character
 }
 
-extension Regex {
-    public struct State {
+extension CharacterConvertible {
+    /// Get character object by variable.
+    var character: Character? { return try? asCharacter() }
+}
+
+extension Character: CharacterConvertible {
+    public func asCharacter() throws -> Character { return self }
+}
+
+extension String: CharacterConvertible {
+    public func asCharacter() throws -> Character {
+        guard characters.count > 0 else { throw RegexError.convertFailed(.outOfBounds) }
+        return characters[characters.startIndex]
+    }
+}
+
+public protocol StateReadable {
+    var status: State.Status { get }
+    func result(of character: CharacterConvertible?) throws -> State.Result
+}
+
+public protocol StateChainable {
+    mutating func link(to character: CharacterConvertible?) -> State
+}
+
+extension State {
+    public enum Result {
+        case matched, missed
         
+        var matched: Bool { return self == .matched }
+    }
+}
+
+extension State {
+    public enum Status {
+        case initial, intermediate, final
+    }
+}
+
+public struct State {
+    fileprivate var _next: Any?
+    public var character: CharacterConvertible?
+    public var states: [(CharacterConvertible&StateReadable)?] = []
+    
+    public init(_ character: CharacterConvertible? = nil, next: State? = nil) {
+        self.character = character
+        _next = next
+    }
+}
+
+extension State {
+    /// The next state object, may be nil.
+    public var next: State? { return _next as? State }
+    /// Creates a state object which is status of initial.
+    public static var initial: State { return State() }
+}
+
+extension State: StateReadable {
+    public var status: State.Status {
+        return .intermediate
+    }
+    
+    public func result(of character: CharacterConvertible?) throws -> State.Result {
+        guard let lhs = self.character?.character, let rhs = character?.character else { return .missed }
+        guard lhs == rhs else { return .missed }
+        return .matched
+    }
+}
+
+extension State: StateChainable {
+    @discardableResult
+    public mutating func link(to character: CharacterConvertible? = nil) -> State {
+        _next = State()
+        self.character = character
+        return next!
     }
 }
